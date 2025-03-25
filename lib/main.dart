@@ -1,3 +1,4 @@
+import 'package:abc/screens/feed_water_view.dart';
 import 'package:abc/screens/first_screen_controller.dart';
 import 'package:abc/screens/initial.dart';
 import 'package:abc/screens/first_screen.dart';
@@ -21,8 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: FirstScreen(),
-      // home: SecondScreenComponent(),
+      home: FeedWaterPage(),
     );
   }
 }

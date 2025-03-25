@@ -6,6 +6,8 @@ import 'package:abc/screens/modelAndList/item_category_List.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'appStyles/custom_button.dart';
+
 class FirstScreen extends StatefulWidget {
   const FirstScreen({super.key});
 
@@ -94,32 +96,49 @@ class _FirstScreenState extends State<FirstScreen> {
       floatingActionButton: Padding(
         padding: EdgeInsets.all(10.0*scaleFactor),
         child: Container(
-          width: MediaQuery.of(context).size.width*0.2*scaleFactor,color: Colors.lightBlue.shade50,
+          width: MediaQuery.of(context).size.width*0.2*(isDesktop ? 1.4 : isTablet ? 1.4 : 1.4  ),color: Colors.lightBlue.shade50,
           padding: EdgeInsets.all(10.0*scaleFactor),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Text("Back",style: AppTextStyles.small10Bold,),
-              Text("Next",style: AppTextStyles.small10Bold,),
-              /*SizedBox(
-                width: isDesktop ? 140 : isTablet ? 120 : 100,  // Increased widths
-                height: isDesktop ? 48 : isTablet ? 40 : 30,    // Same height
+              SizedBox(
+                width: isDesktop ? 70 : isTablet ? 50 : 50,
+                height: isDesktop ? 38 : isTablet ? 34 : 32,
                 child: CustomButton(
-                  text: "Next",
-                  width: isDesktop ? 140 : isTablet ? 120 : 100,  // Increased widths
-                  height: isDesktop ? 48 : isTablet ? 40 : 30,
+                  text: "Back",
+                  width: isDesktop ? 140 : isTablet ? 120 : 100,
+                  height: isDesktop ? 48 : isTablet ? 38 : 38,
                   textStyle: isDesktop
-                      ? AppTextStyles.small12Bold.copyWith(color: Colors.white)
+                      ? AppTextStyles.small10Bold.copyWith(color: Colors.white)
                       : isTablet
-                      ? AppTextStyles.small12Bold.copyWith(color: Colors.white)
+                      ? AppTextStyles.small10Bold.copyWith(color: Colors.white)
                       : AppTextStyles.small10White,
                   // isLoading: controller.isLoading.value,
                   onPressed: (){},
                   backgroundColor: ColorConstants.primaryColor,
                   borderRadius: isDesktop ? 24 : isTablet ? 22 : 20,
-                  isOutlined: true,
+                  isOutlined: false,
                 ),
-              ),*/
+              ),
+              SizedBox(
+                width: isDesktop ? 70 : isTablet ? 50 : 50,
+                height: isDesktop ? 38 : isTablet ? 34 : 32,
+                child: CustomButton(
+                  text: "Next",
+                  width: isDesktop ? 140 : isTablet ? 120 : 100,
+                  height: isDesktop ? 48 : isTablet ? 38 : 38,
+                  textStyle: isDesktop
+                      ? AppTextStyles.small10Bold.copyWith(color: Colors.white)
+                      : isTablet
+                      ? AppTextStyles.small10Bold.copyWith(color: Colors.white)
+                      : AppTextStyles.small10White,
+                  // isLoading: controller.isLoading.value,
+                  onPressed: (){},
+                  backgroundColor: ColorConstants.primaryColor,
+                  borderRadius: isDesktop ? 24 : isTablet ? 22 : 20,
+                  isOutlined: false,
+                ),
+              ),
             ],
           ),
         ),
