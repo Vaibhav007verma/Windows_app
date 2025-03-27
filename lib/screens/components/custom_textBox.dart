@@ -8,7 +8,8 @@ class CustomTextBox extends StatefulWidget {
   String hintText;
   double fontSize;
   double padding;
-  CustomTextBox({super.key, required this.height, required this.width, required this.hintText, required this.fontSize, required this.padding});
+  TextEditingController controller;
+  CustomTextBox({super.key, required this.height, required this.width, required this.hintText, required this.fontSize, required this.padding, required this.controller});
 
   @override
   State<CustomTextBox> createState() => _CustomTextBoxState();
@@ -24,6 +25,7 @@ class _CustomTextBoxState extends State<CustomTextBox> {
           height: widget.height,
           width: widget.width,
           child: TextField(
+            controller: widget.controller,
             textAlign: TextAlign.center,
             style: AppTextStyles.small10Bold.copyWith(fontSize: widget.fontSize ),
             decoration: InputDecoration(
