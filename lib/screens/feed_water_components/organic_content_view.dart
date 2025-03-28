@@ -41,7 +41,7 @@ class _OrganicContentState extends State<OrganicContent> {
             child: Column(
               children: [
                 // Align(alignment: Alignment.topLeft, child: Text("Organic Content",style: AppTextStyles.small10w600.copyWith(fontSize: 10*(isDesktop ? 1.4 : isTablet ? 1.4 : 1.2)))),
-                Expanded(child: Align(alignment: Alignment.topLeft, child: FittedBox(fit: BoxFit.scaleDown, child: Text("Organic Content",style: AppTextStyles.small10w600.copyWith(fontSize: 14))))),
+                Expanded(child: Align(alignment: Alignment.topLeft, child: FittedBox(fit: BoxFit.scaleDown, child: Text("Organic Content",style: AppTextStyles.small10w600.copyWith(fontSize: 13*scaleFactor))))),
 
 
 
@@ -49,7 +49,7 @@ class _OrganicContentState extends State<OrganicContent> {
                 Align( alignment: Alignment.bottomCenter,
                   child:
                   Container( color: Colors.transparent,
-                    height: constraints.maxHeight*0.7/*60*(isDesktop ? 0.9 : isTablet ? 0.9 : 1.0)*/,
+                    height: constraints.maxHeight*0.65/*60*(isDesktop ? 0.9 : isTablet ? 0.9 : 1.0)*/,
                     width: constraints.maxWidth/*180*(isDesktop ? 1.8 : isTablet ? 1.4 : 0.95)*/,
                     child: Column( mainAxisAlignment: MainAxisAlignment.start,
                       children: [

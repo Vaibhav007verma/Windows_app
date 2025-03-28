@@ -42,7 +42,7 @@ class _StreamDefState extends State<StreamDef> {
       decoration:BoxDecoration(border: Border.all(color: Colors.transparent, width: 2)),
     child: Row(
       children: [
-        Expanded(flex:3, child: Container(decoration: BoxDecoration(border: Border(right: BorderSide(width: 1, color: Colors.transparent))), child: Padding(padding: EdgeInsets.only(left: 50.0, top: 25.0, bottom: 25.0, right: 15.0), child: Container(color: Colors.transparent,
+        Expanded(flex:3, child: Container(decoration: BoxDecoration(border: Border(right: BorderSide(width: 1, color: Colors.grey.shade300))), child: Padding(padding: EdgeInsets.only(left: 50.0, top: 25.0, bottom: 25.0, right: 15.0), child: Container(color: Colors.transparent,
           child: LayoutBuilder(
             builder: (context, constraints) {
               return Container(
@@ -51,7 +51,7 @@ class _StreamDefState extends State<StreamDef> {
                 child: Column(
                   children: [
                     // Align(alignment: Alignment.topLeft, child: Text("Stream Definition",style: AppTextStyles.small10w600.copyWith(fontSize: 10*(isDesktop ? 1.4 : isTablet ? 1.4 : 1.2)))),
-                    Expanded(child: Align(alignment: Alignment.topLeft, child: FittedBox(fit: BoxFit.scaleDown, child: Text("Stream Definition",style: AppTextStyles.small10w600.copyWith(fontSize: 14))))),
+                    Expanded(child: Align(alignment: Alignment.topLeft, child: FittedBox(fit: BoxFit.scaleDown, child: Text("Stream Definition",style: AppTextStyles.small10w600.copyWith(fontSize: 14*scaleFactor))))),
 
 
                     Container( color: Colors.transparent, height:constraints.maxHeight*0.85,
@@ -64,7 +64,7 @@ class _StreamDefState extends State<StreamDef> {
                                 Container( color: Colors.transparent, height: constraints.maxHeight*0.18,
                                   child: Row(
                                     children: [
-                                      Text("Stream 1",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),SizedBox(width: 5*scaleFactor,),
+                                      Text("Stream 1",style: AppTextStyles.small10w600.copyWith(fontSize: 12*scaleFactor)),SizedBox(width: 5*scaleFactor,),
                                       Padding(
                                         padding: const EdgeInsets.symmetric(horizontal: 2.0),
                                         child: CustomTextBox(
@@ -84,7 +84,7 @@ class _StreamDefState extends State<StreamDef> {
                                 Container( color: Colors.transparent, height: constraints.maxHeight*0.18,
                                   child: Row(
                                     children: [
-                                      Text("Stream 1",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),SizedBox(width: 5*scaleFactor,),
+                                      Text("Stream 2",style: AppTextStyles.small10w600.copyWith(fontSize: 12*scaleFactor)),SizedBox(width: 5*scaleFactor,),
                                       Padding(
                                         padding: const EdgeInsets.symmetric(horizontal: 2.0),
                                         child: CustomTextBox(
@@ -104,7 +104,8 @@ class _StreamDefState extends State<StreamDef> {
                                 Container( color: Colors.transparent, height: constraints.maxHeight*0.18,
                                   child: Row(
                                     children: [
-                                      Text("Stream 1",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),SizedBox(width: 5*scaleFactor,),
+                                      Text("Stream 3",style: AppTextStyles.small10w600.copyWith(fontSize: 12*scaleFactor)),SizedBox(width: 5*scaleFactor,),
+
                                       Padding(
                                         padding: const EdgeInsets.symmetric(horizontal: 2.0),
                                         child: CustomTextBox(
@@ -133,13 +134,15 @@ class _StreamDefState extends State<StreamDef> {
                                 Expanded(
                                   child: Container(
                                     width: 120*(isDesktop ? 1.8 : isTablet ? 1.3 : 1.1),
-                                    decoration: BoxDecoration(color:Colors.transparent, border: Border(top: BorderSide(color: ColorConstants.primaryColor, width: 2)) ),
+                                    decoration: BoxDecoration(color:Colors.transparent, border: Border(top: BorderSide(color: ColorConstants.primaryColor, width: 1)) ),
                                     child: Row( mainAxisAlignment: MainAxisAlignment.start, crossAxisAlignment: CrossAxisAlignment.center,
                                       children: [
-                                        Text("Stream 1",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),SizedBox(width: 5*scaleFactor,),
+                                        Text("",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),
+
+                                        SizedBox(width: 55*scaleFactor),
 
                                         Padding(
-                                          padding: const EdgeInsets.only(right: 5.0),
+                                          padding: const EdgeInsets.only(right: 5.0,top:3),
                                           child: CustomTextBox(
                                             height: 20*(isDesktop ? 1.1 : isTablet ? 1.1 : 1.1),
                                             width: 55*(isDesktop ? 1.2 : isTablet ? 0.9 : 0.9),
@@ -152,11 +155,11 @@ class _StreamDefState extends State<StreamDef> {
                                         Text("%",style: AppTextStyles.small10w600.copyWith(fontSize: 10*(isDesktop ? 1.2 : isTablet ? 1.2 : 1.2))),
                                       ],),),
                                 ),
-                                SizedBox(
+                                Container(
                                   width: isDesktop ? 100 : isTablet ? 80 : 80,
                                   height: isDesktop ? 25 : isTablet ? 22 : 20,
                                   child: CustomButton(
-                                    text: "Adjust pH",
+                                    text: "+ Add Stream",
                                     width: isDesktop ? 140 : isTablet ? 120 : 100,
                                     height: isDesktop ? 48 : isTablet ? 38 : 38,
                                     textStyle: isDesktop
@@ -185,7 +188,7 @@ class _StreamDefState extends State<StreamDef> {
             }
           )
         ),)),),
-        Expanded(flex:5, child: Padding( padding: EdgeInsets.symmetric(horizontal: 60.0, vertical: 20.0),
+        Expanded(flex:5, child: Padding( padding: EdgeInsets.only(left: 60.0,right: 60.0, top: 10.0, bottom: 20.0),
           child: LayoutBuilder(
             builder: (context, constraints) {
               return Container(color: Colors.transparent,
@@ -202,34 +205,34 @@ class _StreamDefState extends State<StreamDef> {
                         child: Row(
                           children: [
                             Container(
-                              height: MediaQuery.of(context).size.height*(isDesktop ? 0.2 : isTablet ? 0.2 : 0.2),
-                              width: MediaQuery.of(context).size.width*(isDesktop ? 0.2 : isTablet ? 0.2 : 0.2),
+                              height: constraints.maxHeight*0.75,
+                              width: constraints.maxWidth*0.5,
                               color: Colors.transparent,
                               child: Column( crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text("Water Type",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),
                                   CustomDropdown(
-                                    height: MediaQuery.of(context).size.height*0.2*(isDesktop ? 0.2 : isTablet ? 0.16 : 0.15),
-                                    width: MediaQuery.of(context).size.width*(isDesktop ? 0.2 : isTablet ? 0.2 : 0.2),
+                                    height: constraints.maxHeight*0.15,
+                                    width: constraints.maxWidth*0.45,
                                     listItems: ['Item 1', 'Item 2', 'Item 3', 'Item 4'],
                                     fontSize: 10*(isDesktop ? 1.5 : isTablet ? 1.4 : 1.2),
                                     hintText: "Water Type",
                                   ),
-                                  Expanded(child: Text("Suggested SubType: \nNTU > 2,TSS . 5,TOC > 2 \n*Suggestions based on user Turbidity and TSS input.The selected Water Sub-Type determines the Design Guidelines to be used.",style: AppTextStyles.small10w600.copyWith(fontSize: 8*scaleFactor))),
+                                  Expanded( child: Text("Suggested SubType: \nNTU > 2,TSS . 5,TOC > 2 \n*Suggestions based on user Turbidity and TSS input.The selected Water Sub-Type determines the Design Guidelines to be used.",style: AppTextStyles.small10w600.copyWith(fontSize: 7*scaleFactor))),
                                 ],
                               ),
                             ),Spacer(),
                             Container(
-                              height: MediaQuery.of(context).size.height*(isDesktop ? 0.2 : isTablet ? 0.2 : 0.2),
-                              width: MediaQuery.of(context).size.width*(isDesktop ? 0.2 : isTablet ? 0.2 : 0.2),
+                              height: constraints.maxHeight*0.75,
+                              width: constraints.maxWidth*0.45,
                               color: Colors.transparent,
                               child: Column( crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text("Water Sub-type",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),
 
                                   CustomDropdown(
-                                    height: MediaQuery.of(context).size.height*0.2*(isDesktop ? 0.2 : isTablet ? 0.16 : 0.15),
-                                    width: MediaQuery.of(context).size.width*(isDesktop ? 0.2 : isTablet ? 0.2 : 0.2),
+                                    height: constraints.maxHeight*0.15,
+                                    width: constraints.maxWidth*0.45,
                                     listItems: ['Item 1', 'Item 2', 'Item 3', 'Item 4'],
                                     fontSize: 10*(isDesktop ? 1.5 : isTablet ? 1.4 : 1.2),
                                     hintText: "NTU≤2,TSS≤5",

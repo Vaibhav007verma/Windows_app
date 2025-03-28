@@ -6,10 +6,10 @@ class ItemCategoryList{
   List<ItemModel> pressureList = [
     ItemModel(id: "1", itemName: "Maximum Air Scour Pressure ",itemValue: "0.75",itemType: "bar",),
     ItemModel(id: "2", itemName: "Filterate Pressure",itemValue: "0.50",itemType: "bar",),
-    ItemModel(id: "3", itemName: "Filtration Piping Pressure Drop: 25*C",itemValue: "0.40",itemType: "bar",),
-    ItemModel(id: "4", itemName: "Strainer Pressure Drop: 25*C",itemValue: "0.10",itemType: "bar",),
-    ItemModel(id: "5", itemName: "BackWash Piping Pressure: 25*C",itemValue: "0.50",itemType: "bar",),
-    ItemModel(id: "6", itemName: "CIP Piping Pressure Drop: 35*C",itemValue: "2.50",itemType: "bar",),
+    ItemModel(id: "3", itemName: "Filtration Piping Pressure Drop: 25°C",itemValue: "0.40",itemType: "bar",),
+    ItemModel(id: "4", itemName: "Strainer Pressure Drop: 25°C",itemValue: "0.10",itemType: "bar",),
+    ItemModel(id: "5", itemName: "BackWash Piping Pressure: 25°C",itemValue: "0.50",itemType: "bar",),
+    ItemModel(id: "6", itemName: "CIP Piping Pressure Drop: 35°C",itemValue: "2.50",itemType: "bar",),
   ];
 
 

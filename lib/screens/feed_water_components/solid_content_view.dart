@@ -43,9 +43,8 @@ class _SolidContentState extends State<SolidContent> {
                Expanded(child: Align(alignment: Alignment.topLeft, child: FittedBox(fit: BoxFit.scaleDown, child: Text("Solid Content",style: AppTextStyles.small10w600.copyWith(fontSize: 14*scaleFactor))))),
 
 
-                // SizedBox(  height: 0*scaleFactor,),
                 Container(
-                  color: Colors.transparent, height: constraints.maxHeight*0.9,
+                  color: Colors.transparent, height: constraints.maxHeight*0.85,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                    children: [
@@ -54,7 +53,7 @@ class _SolidContentState extends State<SolidContent> {
                        width: constraints.maxWidth,
                        child: Column( mainAxisAlignment: MainAxisAlignment.start,
                          children: [
-                           Align(alignment: Alignment.topLeft, child: Text("Organics (TOC)",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor))),
+                           Align(alignment: Alignment.topLeft, child: Text("Turbidity",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor))),
                            Spacer(),
                            Row(
                              children: [
@@ -67,7 +66,7 @@ class _SolidContentState extends State<SolidContent> {
                                  controller: controller.first_solid_Controller,
                                ),
                                SizedBox(width: 5*scaleFactor,),
-                               Text("mg/l",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),
+                               Text("NTU",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),
 
                              ],
                            )
@@ -81,7 +80,7 @@ class _SolidContentState extends State<SolidContent> {
                        width:  constraints.maxWidth,
                        child: Column( mainAxisAlignment: MainAxisAlignment.start,
                          children: [
-                           Align(alignment: Alignment.topLeft, child: Text("Organics (TOC)",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor))),
+                           Align(alignment: Alignment.topLeft, child: Text("Total Suspended Solids (TSS)",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor))),
                            Spacer(),
                            Row(
                              children: [
@@ -109,7 +108,7 @@ class _SolidContentState extends State<SolidContent> {
                        width:  constraints.maxWidth,
                        child: Column( mainAxisAlignment: MainAxisAlignment.start,
                          children: [
-                           Align(alignment: Alignment.topLeft, child: Text("Organics (TOC)",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor))),
+                           Align(alignment: Alignment.topLeft, child: Text("SDI₁₅",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor))),
                            Spacer(),
                            Row(
                              children: [
@@ -122,7 +121,7 @@ class _SolidContentState extends State<SolidContent> {
                                  controller: controller.third_solid_Controller,
                                ),
                                SizedBox(width: 5*scaleFactor,),
-                               Text("mg/l",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),
+                               Text("",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),
 
                              ],
                            )

@@ -38,7 +38,7 @@ class _AdditionalFeedWaterState extends State<AdditionalFeedWater> {
     final double scaleFactor = ResponsiveUtils.getScaleFactor(context);
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 22.0, horizontal: 15.0),
+      padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 15.0),
       child: LayoutBuilder(
         builder: (context,constraints) {
           return Container(
@@ -46,45 +46,18 @@ class _AdditionalFeedWaterState extends State<AdditionalFeedWater> {
             width: 50, color: Colors.transparent,
             child: Column( mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-              Expanded(child: Align(alignment: Alignment.topLeft, child: FittedBox(fit: BoxFit.scaleDown, child: Text("Additional Feed Water Information",style: AppTextStyles.small10w600.copyWith(fontSize: 14))))),
+              Container(height:constraints.maxHeight*0.2, color: Colors.transparent, child: Expanded(child: Align(alignment: Alignment.topLeft, child: FittedBox(fit: BoxFit.scaleDown, child: Text("Additional Feed Water Information",style: AppTextStyles.small10w600.copyWith(fontSize: 14)))))),
+              SizedBox(height: constraints.maxHeight*0.1,),
+              CustomTextBox(
+                height: constraints.maxHeight*0.6,
+                width: constraints.maxWidth,
+                fontSize: 10 * (isDesktop ? 1.2 : isTablet ? 1.0 : 0.8),
+                hintText: "0.00",
+                padding: 0.0,
+                controller: controller.additional_Controller,
+              ),
 
 
-               /* Container(
-                  height: constraints.maxHeight * 0.7,
-                  width: constraints.maxWidth,
-                  color: Colors.grey,  // Ensure grey background is visible
-                  child: Column(
-                    children: [Spacer(),
-                      Container(
-                        height: constraints.maxHeight * 0.2,
-                        width: constraints.maxWidth * 0.2,
-                        color: Colors.green,
-                      ),
-                    ],
-                  ),
-                )*/
-
-
-                 Container( color: Colors.transparent,
-                   height: constraints.maxHeight*0.7,// pink container * 0.7
-                   width: constraints.maxWidth,
-                  child: Column(
-                    children: [Spacer(),
-                      Container( color: Colors.transparent,
-                        height: constraints.maxHeight*0.7,// pink container * 0.7
-                        width: constraints.maxWidth,
-                        child: CustomTextBox(
-                            height: constraints.maxHeight*0.7,// pink container * 0.7
-                            width: constraints.maxWidth,
-                            fontSize: 10 * (isDesktop ? 1.2 : isTablet ? 1.0 : 0.8),
-                            hintText: "0.00",
-                            padding: 0.0,
-                            controller: controller.additional_Controller,
-                          ),
-                      ),
-                    ],
-                  ),
-                ),
 
               ],
             ),

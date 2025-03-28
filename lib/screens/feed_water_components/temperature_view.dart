@@ -45,13 +45,13 @@ class _TemperatureContentState extends State<TemperatureContent> {
                 // Spacer(),
                 Container( color: Colors.transparent,
                   height: constraints.maxHeight*0.75/*60*(isDesktop ? 0.9 : isTablet ? 0.9 : 1.0)*/,
-                  width: constraints.maxWidth/*180*(isDesktop ? 2.3 : isTablet ? 1.8 : 1.4)*/,
+                  width: constraints.maxWidth*0.8/*180*(isDesktop ? 2.3 : isTablet ? 1.8 : 1.4)*/,
                   child: Column( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Row(
                         children: [
                           Container( color: Colors.transparent,
-                            height: constraints.maxHeight*0.7/*60*(isDesktop ? 0.9 : isTablet ? 0.9 : 1.0)*/,
+                            height: constraints.maxHeight*0.6/*60*(isDesktop ? 0.9 : isTablet ? 0.9 : 1.0)*/,
                             child: Column(mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Row(
@@ -59,40 +59,40 @@ class _TemperatureContentState extends State<TemperatureContent> {
                                     Text("40.0",style: AppTextStyles.small10w600.copyWith(fontSize: 16*scaleFactor)),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 2.0),
-                                      child: Text("*C",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),
+                                      child: Text("°C",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),
                                     ),
                                   ],
                                 ),Spacer(),
-                                Text("Minimum",style: AppTextStyles.small10w600.copyWith(fontSize: 9*scaleFactor)),
+                                Text("Minimum",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),
                               ],),
                           ),
                           Expanded(
                             child: Container( color: Colors.transparent,
-                              height: constraints.maxHeight*0.7,
+                              height: constraints.maxHeight*0.6,
                               child: Column(mainAxisAlignment: MainAxisAlignment.center,
                                children: [
                                  Row( mainAxisAlignment: MainAxisAlignment.center,
                                    children: [
                                      CustomTextBox(
-                                       height: 25*scaleFactor,
+                                       height: 20*scaleFactor,
                                        width: 55*scaleFactor,
-                                       fontSize: 14*scaleFactor,
-                                       hintText: "0.00",
-                                       padding: 2.0,
+                                       fontSize: 12*scaleFactor,
+                                       hintText: "0.01",
+                                       padding: 0.0,
                                        controller: controller.temperature_Controller,
                                      ), SizedBox(width: 5*scaleFactor,),
-                                     Text("*C",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),
+                                     Text("°C",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),
 
                                    ],
                                  ),Spacer(),
-                                 Text("Design",style: AppTextStyles.small10w600.copyWith(fontSize: 9*scaleFactor)),
+                                 Text("Design",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),
 
                                ],
                                                      ),
                             ),
                           ),
                           Container( color: Colors.transparent,
-                            height: constraints.maxHeight*0.7,
+                            height: constraints.maxHeight*0.6,
                             child: Column( mainAxisAlignment: MainAxisAlignment.center,
                              children: [
                                Row(
@@ -100,11 +100,11 @@ class _TemperatureContentState extends State<TemperatureContent> {
                                    Text("40.0",style: AppTextStyles.small10w600.copyWith(fontSize: 16*scaleFactor)),
                                    Padding(
                                      padding: const EdgeInsets.only(left: 2.0),
-                                     child: Text("*C",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),
+                                     child: Text("°C",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),
                                    ),
                                  ],
                                ),Spacer(),
-                               Text("Maximum",style: AppTextStyles.small10w600.copyWith(fontSize: 9*scaleFactor)),
+                               Text("Maximum",style: AppTextStyles.small10w600.copyWith(fontSize: 10*scaleFactor)),
                              ],),
                           ),
                         ],

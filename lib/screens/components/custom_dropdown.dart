@@ -33,7 +33,7 @@ class _CustomDropdownState extends State<CustomDropdown> {
         ),
         child: DropdownButtonHideUnderline(
           child: DropdownButton<String>(
-            value: selectedValue,hint: Text(widget.hintText,style: TextStyle(fontSize: 0.85*widget.fontSize),),
+            value: selectedValue,hint: Text(widget.hintText,style: TextStyle(fontSize: 0.82*widget.fontSize),),
             isExpanded: true, isDense: true,
             icon: Icon(Icons.keyboard_arrow_down_sharp, color: Colors.black,size: 20,),
             dropdownColor: ColorConstants.lightBlue,
